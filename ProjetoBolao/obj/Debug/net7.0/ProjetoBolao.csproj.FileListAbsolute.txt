@@ -1,0 +1,14 @@
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\bin\Debug\net7.0\ProjetoBolao.exe
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\bin\Debug\net7.0\ProjetoBolao.deps.json
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\bin\Debug\net7.0\ProjetoBolao.runtimeconfig.json
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\bin\Debug\net7.0\ProjetoBolao.dll
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\bin\Debug\net7.0\ProjetoBolao.pdb
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\ProjetoBolao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\ProjetoBolao.AssemblyInfoInputs.cache
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\ProjetoBolao.AssemblyInfo.cs
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\ProjetoBolao.csproj.CoreCompileInputs.cache
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\ProjetoBolao.dll
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\refint\ProjetoBolao.dll
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\ProjetoBolao.pdb
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\ProjetoBolao.genruntimeconfig.cache
+C:\Users\rapha\OneDrive\Documentos\ProjetoBolao\obj\Debug\net7.0\ref\ProjetoBolao.dll
