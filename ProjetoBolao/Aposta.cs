@@ -18,6 +18,31 @@ class Aposta {
         this.jogadores = new List<Jogador>();
     }
 
+    // Método Gets e Sets
+    public Jogador GetOrganizador() {
+        return this.organizador;
+    }
+
+    public void SetOrganizador(Jogador novoJogador) {
+        this.organizador = novoJogador;
+    }
+
+    public List<int> GetNumeros() {
+        return this.numeros;
+    }
+
+    public void SetNumeros(List<int> novosNumeros) {
+        this.numeros = novosNumeros;
+    }
+
+    public List<Jogador> GetJogadores() {
+        return this.jogadores;
+    }
+
+    public void SetJogadores(List<Jogador> novosJogadores) {
+        this.jogadores = novosJogadores;
+    }
+
     public void InserirNumeros() {
         Console.WriteLine("Digite a quantidade de números apostados (entre 6 e 15): ");
         int cont = int.Parse(Console.ReadLine());
@@ -56,8 +81,8 @@ class Aposta {
         string cpfOrganizador = Console.ReadLine();
         Jogador organizador = jogadores.Find(j => j.GetCpf() == cpfOrganizador);
         if (organizador != null) {
-            this.organizador = organizador;
-            this.jogadores.Add(this.organizador);
+            SetOrganizador(organizador);
+            GetJogadores().Add(GetOrganizador());
         }
     }
 
@@ -72,7 +97,7 @@ class Aposta {
             string cpfJogadores = Console.ReadLine();
             Jogador jogador = jogadores.Find(j => j.GetCpf() == cpfJogadores);
             if (jogador != null) {
-                this.jogadores.Add(jogador);
+                GetJogadores().Add(jogador);
             }
         }
     }
@@ -91,13 +116,13 @@ class Aposta {
         double transform = premio * 0.1;
         double transformParcial = (premio - transform) / this.jogadores.Count;
         double premioOrganizador = transform + transformParcial;
-        this.organizador.listarDados();
+        GetOrganizador().listarDados();
         Console.WriteLine($"Prêmio {premioOrganizador.ToString("0.00")}");
         Console.WriteLine("");
         double novoValor = premio - transform;
         double premioJogadores = novoValor / this.jogadores.Count;
-        for (int i = 1; i < this.jogadores.Count; i++) {
-            this.jogadores[i].listarDados();
+        for (int i = 1; i < GetJogadores().Count; i++) {
+            GetJogadores()[i].listarDados();
             Console.Write($"Prêmio {premioJogadores.ToString("0.00")}");
             Console.WriteLine("");
         }
