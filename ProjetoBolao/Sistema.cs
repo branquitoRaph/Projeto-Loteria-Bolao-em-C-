@@ -11,6 +11,23 @@ class Sistema {
         this.jogadores = new List<Jogador>();
     }
 
+    // Métodos Gets e Sets
+    public List<Aposta> GetApostas() {
+        return this.apostas;
+    }
+
+    public void SetApostas(List<Aposta> novaApostas) {
+        this.apostas = novaApostas;
+    }
+
+    public List<Jogador> GetJogadoresS() {
+        return this.jogadores;
+    }
+
+    public void SetJogadoresS(List<Jogador> novosJogadoresS) {
+        this.jogadores = novosJogadoresS;
+    }
+
     public static int MenuInicial() {
         Console.WriteLine("------Bem vindo a Lotérica do Tico e Teco------ ");
         Console.WriteLine("Digite uma das opções abaixo: ");
@@ -28,8 +45,17 @@ class Sistema {
     }
 
     public void CadastrarJogador() {
-        Jogador jog = new Jogador();
-        this.jogadores.Add(jog);
+        bool cadastrado = false;
+        while (!cadastrado) {
+            Jogador jog = new Jogador();
+            if (jog.Igualdade(this.jogadores, jog)) {
+                Console.WriteLine("Jogador já cadastrado!");
+            } else {
+                GetJogadoresS().Add(jog);
+                Console.WriteLine("Jogador cadastrado!");
+                cadastrado = true;
+            }
+        }
     }
 
     public void CadastrarAposta() {
@@ -37,12 +63,12 @@ class Sistema {
         apt.InserirNumeros();
         apt.InserirOrganizador(jogadores);
         apt.InserirJogadores(jogadores);
-        this.apostas.Add(apt);
+        GetApostas().Add(apt);
     }
 
     private List<Aposta> Vencedoras(List<int> numerosSorteados) {
         List<Aposta> aptsAux = new List<Aposta>();
-        foreach (Aposta apt in this.apostas) {
+        foreach (Aposta apt in GetApostas()) {
             if (apt.Vencedora(numerosSorteados)) {
                 Console.WriteLine("Aposta Vencedora!");
                 aptsAux.Add(apt);
